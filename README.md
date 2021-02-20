@@ -1,10 +1,15 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+# CNN-LSTMs for regional hydrological modelling
 
-\f0\fs24 \cf0 README.txt\
-\
-This is a test readme file.  Will fill up later, plzzz}
+This repository contains the code used in the study:
+
+Anderson, Sam and Valentina Radic.  "Evaluation and interpretation of convolutional-recurrent neural networks for regional hydrological modelling" (Submitted 2021).
+
+The code in this repository can reproduce all figures and findings in the study.  All data used is publicly accessable.  This repository contains the following files:
+
+* main.ipynb: Defines functions, loads preprocessed data, builds/trains CNN-LSTM model, evaluates performance, interprets model learning, creates figures
+* preprocessing.ipynb: Loads raw data (temperature, precipitation, streamflow, and basin outlines) and preprocesses into format used in main.ipynb
+* figure_study_region.ipynb: Creates Figure 1 (study region).
+* era5_download_P_075grid.py: Connects to ERA5 API and downloads raw precipitation data
+* era5_download_T2m_075grid.pi: Connects to ERA5 API and downloads raw temperature data
+
+Practically, main.ipynb runs best on a GPU to train the models much faster.  It is set up to run in Google Colab, with files organized/saved in Google Drive as outlined in the notebook.  The other files can be run locally.
