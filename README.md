@@ -31,11 +31,15 @@ Practically, main.ipynb runs best on a GPU to train the models much faster.  It 
     * From [here](https://open.canada.ca/data/en/dataset/0c121878-ac23-46f5-95df-eb9960753375), download the folder WSC_Basins.gdb.  A direct download link and other information can be found [here](https://wiki.usask.ca/pages/viewpage.action?pageId=1766228079#HowtoloadandreprojectWaterSurveyofCanada%22WSC_Basins%22GeodatabaseinQGIS-Dataavailability)
 Save this folder as ./Data/WSC_Basins.gdb/
 
-4. Preprocess the raw ERA5, streamflow, and basin outline data using preprocessing.ipynb
+4. Download provincial border shapefiles:
 
-5. Upload preprocessed files to Google Drive (in folder ./data/).
+	* From [Statistic Canada](https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb), download the "Provinces/Territories Cartographic Boundary File - 2016 Census" shapefile (SHP).  Note: This data is not necessary for the analysis, but it used for making maps.
 
-6. Run main.ipynb in Colab.
+5. Preprocess the raw ERA5, streamflow, and basin outline data using preprocessing.ipynb
+
+6. Upload preprocessed files from Step 5 to Google Drive in folder ./data/.  Upload shapefiles from Step 4 to Google Drive in folder ./data/province_borders/ (e.g. ./data/province_borders/lpr_000b16a_e.shp)
+
+7. Run main.ipynb in Colab.
 
 ___
 # File organization
@@ -70,8 +74,9 @@ Google Drive organization (for Colab access)
 
 * My Drive/  
 	* Colab Notebooks/  
-	* cnn_lstm_era/ 
-		* data/  
+	* cnn_lstm_era/   
 		* models/  
 		* output/  
-		* heat_maps/  
+		* heat_maps/ 
+		* data/
+			* province_borders/  
