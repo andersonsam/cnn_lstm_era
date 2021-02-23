@@ -6,7 +6,7 @@ Anderson, Sam and Valentina Radic.  "Evaluation and interpretation of convolutio
 
 The code in this repository can reproduce all figures and findings in the study.  All data used is publicly accessable and details to download data are given below.  This repository contains the following files:
 
-* main.ipynb: Defines functions, loads preprocessed data, builds/trains CNN-LSTM model, evaluates performance, interprets model learning, creates figures
+* main_publish.ipynb: Defines functions, loads preprocessed data, builds/trains CNN-LSTM model, evaluates performance, interprets model learning, creates figures
 * preprocessing.ipynb: Loads raw data (temperature, precipitation, streamflow, and basin outlines) and preprocesses into format used in main.ipynb
 * figure_study_region.ipynb: Creates Figure 1 (study region).
 * era5_download_P_075grid.py: Connects to ERA5 API and downloads raw precipitation data
@@ -16,7 +16,7 @@ The code in this repository can reproduce all figures and findings in the study.
 ___
 # How to run code
 
-Practically, main.ipynb runs best on a GPU to train the models much faster.  It is set up to run in Google Colab.  Google Colab does not access locally saved files; rather, it can access those in Github and Google Drive.  So, main.ipynb can be run on Colab via Github, and all outputs/required data can be saved/organized in Google Drive as outlined in the notebook.  The other files can be run locally.  Here we give instructions to replicate the results in Google Colab.
+Practically, main_publish.ipynb runs best on a GPU to train the models much faster.  It is set up to run in Google Colab.  Google Colab does not access locally saved files; rather, it can access those in Github and Google Drive.  So, main.ipynb can be run on Colab via Github, and all outputs/required data can be saved/organized in Google Drive as outlined in the notebook.  The other files can be run locally.  Here we give instructions to replicate the results in Google Colab.
 
 1. Download ERA5 data:
 
@@ -39,7 +39,7 @@ Save this folder as ./Data/WSC_Basins.gdb/
 
 6. Upload preprocessed files from Step 5 to Google Drive in folder ./data/.  Upload shapefiles from Step 4 to Google Drive in folder ./data/province_borders/ (e.g. ./data/province_borders/lpr_000b16a_e.shp)
 
-7. Run main.ipynb in Colab.
+7. Run main_publish.ipynb in Colab.
 
 ___
 # File organization
@@ -47,7 +47,7 @@ ___
 Local organization:  
 
 * cnn_lstm_era/  
-  * main.ipynb  
+  * main_publish.ipynb  
   * preprocessing.ipynb  
   * figure_study_region.ipynb  
   * era5_download_P_075grid.py  
