@@ -40,7 +40,7 @@ Save this folder as ./Data/WSC_Basins.gdb/
 ___
 # File organization
 
-Local organization (e.g. on Github):  
+Local organization:  
 
 * cnn_lstm_era/  
   * main.ipynb  
