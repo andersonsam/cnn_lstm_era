@@ -49,27 +49,29 @@ Local organization (e.g. on Github):
   * era5_download_P_075grid.py  
   * era5_download_T2M_075grid.py  
   * Data/  
-    * ERA5/  
-	  * ERA5_T_1979_2015_6hourly_075_grid_AB_BC.nc  
+  	* ERA5/  
+		* ERA5_T_1979_2015_6hourly_075_grid_AB_BC.nc  
 		* ERA5_P_1979_2015_6hourly_075_grid_AB_BC.nc  
-	  * Flow/  
-		  * AB/  
-			  * ABActNatFlowAll.csv  
-			  * 05AA004_Daily_Flow_ts.csv  
-			  * …  
-			  * 11AA026_Daily_Flow_ts.csv  
+	* Flow/
+		* AB/  
+		* ABActNatFlowAll.csv  
+			* 05AA004_Daily_Flow_ts.csv  
+			* ...  
+			* 11AA026_Daily_Flow_ts.csv  
 		  * BC/  
-			  * BCActNatFlowAll.csv  
-			  * 07EA004_Daily_Flow_ts.csv  
-			  * …  
-			  * 10DA001_Daily_flow_ts.csv  
+		  	* BCActNatFlowAll.csv  
+		  	* 07EA004_Daily_Flow_ts.csv  
+		  	* ...
+		  	* 10DA001_Daily_flow_ts.csv  
+	* WSC_Basins.gdb/
+		* ...
 
 Google Drive organization (for Colab access)  
 
 * My Drive/  
-  * Colab Notebooks/  
-	  * cnn_lstm_era/  
-		  * data/  
-		  * models/  
-		  * output/  
-		  * heat_maps/  
+	* Colab Notebooks/  
+	* cnn_lstm_era/ 
+		* data/  
+		* models/  
+		* output/  
+		* heat_maps/  
