@@ -11,6 +11,7 @@ The code in this repository can reproduce all figures and findings in the study.
 * figure_study_region.ipynb: Creates Figure 1 (study region).
 * era5_download_P_075grid.py: Connects to ERA5 API and downloads raw precipitation data
 * era5_download_T2m_075grid.pi: Connects to ERA5 API and downloads raw temperature data
+* non_contributin_areas.ipynb: Calculates non-contributing areas of basins in the eastern cluster
 
 
 ___
@@ -74,9 +75,9 @@ Google Drive organization (for Colab access)
 
 * My Drive/  
 	* Colab Notebooks/  
-	* cnn_lstm_era/   
-		* models/  
-		* output/  
-		* heat_maps/ 
-		* data/
-			* province_borders/  
+		* cnn_lstm_era/   
+			* models/  
+			* output/  
+			* heat_maps/ 
+			* data/
+				* province_borders/  
