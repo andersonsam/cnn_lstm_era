@@ -42,6 +42,13 @@ Save this folder as ./Data/WSC_Basins.gdb/
 
 7. Run main_publish.ipynb in Colab.
 
+If interested in non-contributing areas in the eastern cluster:
+
+8. Download non-contributing area data:
+	* From [here](https://open.canada.ca/data/en/dataset/adb2e613-f193-42e2-987e-2cc9d90d2b7a), download the folder "HYD_AAFC_TOTAL_NON_CTRB_DRAIN.gdb" by clicking 'Pre-packaged FGDB files (Bilingual)' --> 'Access'.  Save this folder as './Data/HYD_AAFC_TOTAL_NON_CTRB_DRAIN.gdb/'.
+
+9. Run non_contributing_areas.ipynb
+
 ___
 # File organization
 
