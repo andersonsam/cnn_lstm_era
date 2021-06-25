@@ -10,14 +10,15 @@ The code in this repository can reproduce all figures and findings in the study.
 * preprocessing.ipynb: Loads raw data (temperature, precipitation, streamflow, and basin outlines) and preprocesses into format used in main.ipynb
 * figure_study_region.ipynb: Creates Figure 1 (study region).
 * era5_download_P_075grid.py: Connects to ERA5 API and downloads raw precipitation data
-* era5_download_T2m_075grid.pi: Connects to ERA5 API and downloads raw temperature data
-* non_contributin_areas.ipynb: Calculates non-contributing areas of basins in the eastern cluster
+* era5_download_T2m_075grid.py: Connects to ERA5 API and downloads raw temperature data
+* non_contributing_areas.ipynb: Calculates non-contributing areas of basins in the eastern cluster
+* mini.ipynb: A miniature version of main_publish.ipynb, which loads and structures one year of input/target data, clusters stream gauge stations, makes heat maps, and perturbs input temperature 
 
 
 ___
 # How to run code
 
-Practically, main_publish.ipynb runs best on a GPU to train the models much faster.  It is set up to run in Google Colab.  Google Colab does not access locally saved files; rather, it can access those in Github and Google Drive.  So, main.ipynb can be run on Colab via Github, and all outputs/required data can be saved/organized in Google Drive as outlined in the notebook.  The other files can be run locally.  Here we give instructions to replicate the results in Google Colab.
+Practically, main_publish.ipynb runs best on a GPU to train the models much faster.  It is set up to run in Google Colab.  Google Colab does not access locally saved files; rather, it can access those in Github and Google Drive.  So, main_publish.ipynb can be run on Colab via Github, and all outputs/required data can be saved/organized in Google Drive as outlined in the notebook.  The other files (preprocessing.ipynb, figure_study_region.ipynb, era5_download_P_075grid.py, era5_download_T2m_075grid.py, non_contributing_areas.ipynb) can be run locally.  Here we give instructions to replicate the results in Google Colab.
 
 1. Download ERA5 data:
 
@@ -50,6 +51,11 @@ If interested in non-contributing areas in the eastern cluster:
 9. Run non_contributing_areas.ipynb
 
 ___
+# Miniature code
+
+To reproduce some of the key results without downloading and structuring the whole datasets in Steps 1-9 above, you can use mini.ipynb.  This notebook loads enough preprocessed data to structure 1 year of climate reanalysis and streamflow data, load trained models, make sensitivity heat maps, and perturb input temperature data.  This notebook uses data saved in './Data/mini/' which can be uploaded to Google Drive (for access in Colab) in the folder './data_mini/'.  While mini.ipynb can be run locally, predicting streamflow under temperature perturbations (to identify freshet response) or spatial perturbations (to make heat maps) is much faster when predictions can be made in batches on a GPU (e.g. on Colab).
+
+___
 # File organization
 
 Local organization:  
@@ -77,6 +83,12 @@ Local organization:
 		  	* 10DA001_Daily_flow_ts.csv  
 	* WSC_Basins.gdb/
 		* ...
+	* Mini/
+		* x_intermediate_mini.pickle
+		* y_mini.pickle
+		* flowseason_norm.pickle
+		* station_info.pickle
+		* stationBasins.pickle
 
 Google Drive organization (for Colab access)  
 
@@ -88,3 +100,5 @@ Google Drive organization (for Colab access)
 			* heat_maps/ 
 			* data/
 				* province_borders/  
+			* heat_maps_mini/
+			* data_mini/
