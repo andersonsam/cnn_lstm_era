@@ -39,21 +39,23 @@ Save this folder as ./Data/WSC_Basins.gdb/
 
 5. Preprocess the raw ERA5, streamflow, and basin outline data using preprocessing.ipynb
 
-6. Upload preprocessed files from Step 5 to Google Drive in folder ./data/.  Upload shapefiles from Step 4 to Google Drive in folder ./data/province_borders/ (e.g. ./data/province_borders/lpr_000b16a_e.shp)
+6. Upload preprocessed files from Step 5 to Google Drive in folder './data/'.  Upload shapefiles from Step 4 to Google Drive in folder ./data/province_borders/ (e.g. ./data/province_borders/lpr_000b16a_e.shp)
 
-7. Run main_publish.ipynb in Colab.
+7. Upload trained models (from './Models/') to Google Drive in folder './models/'.
+
+8. Run main_publish.ipynb in Colab.
 
 If interested in non-contributing areas in the eastern cluster:
 
-8. Download non-contributing area data:
+9. Download non-contributing area data:
 	* From [here](https://open.canada.ca/data/en/dataset/adb2e613-f193-42e2-987e-2cc9d90d2b7a), download the folder "HYD_AAFC_TOTAL_NON_CTRB_DRAIN.gdb" by clicking 'Pre-packaged FGDB files (Bilingual)' --> 'Access'.  Save this folder as './Data/HYD_AAFC_TOTAL_NON_CTRB_DRAIN.gdb/'.
 
-9. Run non_contributing_areas.ipynb
+10. Run non_contributing_areas.ipynb
 
 ___
 # Miniature code
 
-To reproduce some of the key results without downloading and structuring the whole datasets in Steps 1-9 above, you can use mini.ipynb.  This notebook loads enough preprocessed data to structure 1 year of climate reanalysis and streamflow data, load trained models, make sensitivity heat maps, and perturb input temperature data.  This notebook uses data saved in './Data/mini/' which can be uploaded to Google Drive (for access in Colab) in the folder './data_mini/'.  While mini.ipynb can be run locally, predicting streamflow under temperature perturbations (to identify freshet response) or spatial perturbations (to make heat maps) is much faster when predictions can be made in batches on a GPU (e.g. on Colab).
+To reproduce some of the key results without downloading and structuring the whole datasets in Steps 1-10 above, you can use mini.ipynb.  This notebook loads enough preprocessed data to structure 1 year of climate reanalysis and streamflow data, load trained models, make sensitivity heat maps, and perturb input temperature data.  This notebook uses data saved in './Data/mini/' which can be uploaded to Google Drive (for access in Colab) in the folder './data_mini/'.  While mini.ipynb can be run locally, predicting streamflow under temperature perturbations (to identify freshet response) or spatial perturbations (to make heat maps) is much faster when predictions can be made in batches on a GPU (e.g. on Colab).
 
 ___
 # File organization
@@ -66,6 +68,8 @@ Local organization:
   * figure_study_region.ipynb  
   * era5_download_P_075grid.py  
   * era5_download_T2M_075grid.py  
+  * Models/
+  	* All trained bulk and fine-tuned models (.h5)
   * Data/  
   	* ERA5/  
 		* ERA5_T_1979_2015_6hourly_075_grid_AB_BC.nc  
