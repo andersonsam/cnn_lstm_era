@@ -52,6 +52,10 @@ If interested in non-contributing areas in the eastern cluster:
 
 10. Run non_contributing_areas.ipynb
 
+If interested in the Reference Hydrometric Basin Network (RHBN) and how stations in the RHBN overlap with those in this study:
+
+11. Download 'RHBN_Metadata.xlsx' from [Environment and Climate Change Canada](https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/RHBN/).  Save in Google Drive in './data/'.  This file is used in main_publish.ipynb.
+
 ___
 # Miniature code
 
