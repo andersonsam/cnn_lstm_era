@@ -37,29 +37,33 @@ Save this folder as ./Data/WSC_Basins.gdb/
 
 	* From [Statistic Canada](https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb), download the "Provinces/Territories Cartographic Boundary File - 2016 Census" shapefile (SHP).  Note: This data is not necessary for the analysis, but it used for making maps.
 
-5. Preprocess the raw ERA5, streamflow, and basin outline data using preprocessing.ipynb
+5. Download glacier data:
 
-6. Upload preprocessed files from Step 5 to Google Drive in folder './data/'.  Upload shapefiles from Step 4 to Google Drive in folder ./data/province_borders/ (e.g. ./data/province_borders/lpr_000b16a_e.shp)
+	* Download the file 02_rgi60_WesternCanadaUS.shp by clicking 'Western Canada and USA' from the [Randolph Glacier Inventory V6.0](https://www.glims.org/RGI/rgi60_dl.html).  Save in Google Drive at './data/RGI/'.
 
-7. Upload trained models (from './Models/') to Google Drive in folder './models/'.
+6. Preprocess the raw ERA5, streamflow, and basin outline data using preprocessing.ipynb
 
-8. Run main_publish.ipynb in Colab.
+7. Upload preprocessed files from Step 5 to Google Drive in folder './data/'.  Upload shapefiles from Step 4 to Google Drive in folder ./data/province_borders/ (e.g. ./data/province_borders/lpr_000b16a_e.shp)
+
+8. Upload trained models (from './Models/') to Google Drive in folder './models/'.
+
+9. Run main_publish.ipynb in Colab.
 
 If interested in non-contributing areas in the eastern cluster:
 
-9. Download non-contributing area data:
+10. Download non-contributing area data:
 	* From [here](https://open.canada.ca/data/en/dataset/adb2e613-f193-42e2-987e-2cc9d90d2b7a), download the folder "HYD_AAFC_TOTAL_NON_CTRB_DRAIN.gdb" by clicking 'Pre-packaged FGDB files (Bilingual)' --> 'Access'.  Save this folder as './Data/HYD_AAFC_TOTAL_NON_CTRB_DRAIN.gdb/'.
 
-10. Run non_contributing_areas.ipynb
+11. Run non_contributing_areas.ipynb
 
 If interested in the Reference Hydrometric Basin Network (RHBN) and how stations in the RHBN overlap with those in this study:
 
-11. Download 'RHBN_Metadata.xlsx' from [Environment and Climate Change Canada](https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/RHBN/).  Save in Google Drive in './data/'.  This file is used in main_publish.ipynb.
+12. Download 'RHBN_Metadata.xlsx' from [Environment and Climate Change Canada](https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/RHBN/).  Save in Google Drive in './data/'.  This file is used in main_publish.ipynb.
 
 ___
 # Miniature code
 
-To reproduce some of the key results without downloading and structuring the whole datasets in Steps 1-10 above, you can use mini.ipynb.  This notebook loads enough preprocessed data to structure 1 year of climate reanalysis and streamflow data, load trained models, make sensitivity heat maps, and perturb input temperature data.  This notebook uses data saved in './Data/mini/' which can be uploaded to Google Drive (for access in Colab) in the folder './data_mini/'.  While mini.ipynb can be run locally, predicting streamflow under temperature perturbations (to identify freshet response) or spatial perturbations (to make heat maps) is much faster when predictions can be made in batches on a GPU (e.g. on Colab).
+To reproduce some of the key results without downloading and structuring the whole datasets in Steps 1-12 above, you can use mini.ipynb.  This notebook loads enough preprocessed data to structure 1 year of climate reanalysis and streamflow data, load trained models, make sensitivity heat maps, and perturb input temperature data.  This notebook uses data saved in './Data/mini/' which can be uploaded to Google Drive (for access in Colab) in the folder './data_mini/'.  While mini.ipynb can be run locally, predicting streamflow under temperature perturbations (to identify freshet response) or spatial perturbations (to make heat maps) is much faster when predictions can be made in batches on a GPU (e.g. on Colab).
 
 ___
 # File organization
@@ -108,5 +112,6 @@ Google Drive organization (for Colab access)
 			* heat_maps/ 
 			* data/
 				* province_borders/  
+				* RGI/
 			* heat_maps_mini/
 			* data_mini/
