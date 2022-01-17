@@ -2,7 +2,7 @@
 
 This repository contains the code used in the study:
 
-Anderson, Sam and Valentina Radic.  "Evaluation and interpretation of convolutional-recurrent neural networks for regional hydrological modelling" (Submitted 2021).
+Anderson, Sam and Radic, Valentina.  "Evaluation and interpretation of convolutional long short-term memory neural networks for regional hydrological modelling". Hydrology and Earth System Sciences, 2022.
 
 The code in this repository can reproduce all figures and findings in the study.  All data used is publicly accessable and details to download data are given below.  This repository contains the following files:
 
